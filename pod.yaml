@@ -2,11 +2,11 @@ apiVersion: v1
 kind: Pod
 
 metadata:
-  name: mohit-pod
+  name: pankaj-pod
 
 spec:
   containers:
-    - name: organic-container
+    - name: pankaj-container
       image: pankajs111/organic-ghee
 
       ports:

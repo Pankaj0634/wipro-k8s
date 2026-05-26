@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 
 metadata:
-  name: organic-ghee-ingress
+  name: pankaj-ingress
 
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
@@ -19,7 +19,7 @@ spec:
 
             backend:
               service:
-                name: organic-ghee-service
+                name: pankaj-service
 
                 port:
                   number: 80
