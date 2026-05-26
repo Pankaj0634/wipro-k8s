@@ -45,6 +45,5 @@ spec:
       port: 5656
       targetPort: 5656
       nodePort: 30008
-      
 
-  type: 
+  type: NodePort
