@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+
+metadata:
+  name: { { .Values.configMap.name } }
+
+data:
+  APP_NAME: "{{ .Values.configMap.APP_NAME }}"
+  APP_VERSION: "{{ .Values.configMap.APP_VERSION }}"
+  APP_PORT: "{{ .Values.configMap.APP_PORT }}"
+  ENVIRONMENT: "{{ .Values.configMap.ENVIRONMENT }}"
