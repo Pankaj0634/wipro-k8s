@@ -12,14 +12,12 @@ spec:
       app: organic-ghee
 
   template:
-
     metadata:
       labels:
         app: organic-ghee
 
     spec:
       containers:
-
         - name: gheecontainers-container
           image: pankajs111/organic-ghee
 
@@ -30,14 +28,13 @@ spec:
                 name: organic-ghee-config
             - secretRef:
                 name: organic-ghee-secret
-                
 
 ---
 apiVersion: v1
 kind: Service
 
 metadata:
-  name: organic-ghee-service
+  name: pankaj-service
 
 spec:
   selector:
