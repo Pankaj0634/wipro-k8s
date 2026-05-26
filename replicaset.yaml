@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: pankaj-replicaSet
+  labels:
+    app: web
+spec: # defines the behavior of the ReplicaSet
+  replicas: 2
+  selector:
+    matchLabels:
+      web: nginx
+  template:
+    metadata:
+      labels:
+        web: nginx
+    spec: # defines the behavior of the Pod
+      containers:
+        image: nginx
+        name: nginx-container
+        ports:
+          - containerPort: 80

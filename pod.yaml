@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+
+metadata:
+  name: mohit-pod
+
+spec:
+  containers:
+    - name: organic-container
+      image: pankajs111/organic-ghee
+
+      ports:
+        - containerPort: 3000

@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: organic-ghee-deployment
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: organic-ghee
+
+  template:
+
+    metadata:
+      labels:
+        app: organic-ghee
+
+    spec:
+      containers:
+
+        - name: gheecontainers-container
+          image: pankajs111/organic-ghee
+
+          ports:
+            - containerPort: 5656
+          envFrom:
+            - configMapRef:
+                name: organic-ghee-config
+            - secretRef:
+                name: organic-ghee-secret
+                
+
+---
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: organic-ghee-service
+
+spec:
+  selector:
+    app: organic-ghee
+
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5656
+
+  type: ClusterIP

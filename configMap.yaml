@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+
+metadata:
+  name: organic-ghee-config
+
+data:
+  APP_NAME: "Organic Ghee"
+  APP_VERSION: "v1.0.0"
+  APP_PORT: "5656"
+  ENVIRONMENT: "production"
+  COMPANY_NAME: "Mohit Organic Products"
