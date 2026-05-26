@@ -38,12 +38,13 @@ metadata:
 
 spec:
   selector:
-    app: organic-ghee
+    app: web
 
   ports:
     - protocol: TCP
-      port: 80
+      port: 5656
       targetPort: 5656
+      nodePort: 30008
       
 
-  type: ClusterIP
+  type: 
